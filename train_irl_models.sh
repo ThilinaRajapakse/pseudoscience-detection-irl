@@ -1,0 +1,1 @@
+while [ ! -f done.runs ]; do python train_irl_models.py ; done 
