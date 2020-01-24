@@ -1,6 +1,7 @@
 import os
 from simpletransformers.classification import ClassificationModel
 import pandas as pd
+from sklearn.metrics import f1_score
 
 
 texts = []
@@ -35,5 +36,5 @@ train_args = {
 }
 
 model = ClassificationModel('roberta', 'outputs', args=train_args)
-model.eval_model(df, verbose=True)
+model.eval_model(df, verbose=True, f1_score=f1_score)
 

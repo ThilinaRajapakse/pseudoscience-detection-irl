@@ -1,9 +1,14 @@
 from simpletransformers.classification import ClassificationModel
 import os
 import pandas as pd
+import datetime
 
+try:
+    completed = os.listdir('irl_predictions')
+except:
+    os.makedirs('irl_predictions')
+    completed = []
 
-completed = os.listdir('irl_predictions')
 train_args = {
     'max_seq_length': 512,
     'num_train_epochs': 1,
@@ -26,7 +31,7 @@ for irl_model in os.listdir('irl_models'):
         target_df['labels'] = predictions
 
         os.makedirs(f'irl_predictions/{irl_model}')
-        target_df.to_csv(f'irl_predictions/{irl_model}/data_irl.tsv', sep='\t')
+        target_df.to_csv(f'irl_predictions/{irl_model}/data_irl.tsv', sep='\t', index=False)
         exit()
 
 
