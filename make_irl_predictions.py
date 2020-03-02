@@ -18,6 +18,7 @@ train_args = {
     'save_steps': 50000,
 
     'sliding_window': True,
+    'reprocess_input_data': True,
 }
 
 
