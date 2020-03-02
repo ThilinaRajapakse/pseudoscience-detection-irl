@@ -26,6 +26,9 @@ pip install simpletransformers
 2. Prepare the data for Intelligent ReLabelling (IRL).
    1. Run `IRL_data_prep/create_data_dfs_by_source.py`.
    2. Run `IRL_data_prep/create_irl_datasets.py`.
-3. Run `train_irl_models.sh`
-4. Run `make_irl_predictions.sh`
-5. Run `train_full_model.py`
+
+### Training
+
+1. Run `train_irl_models.sh`
+2. Run `make_irl_predictions.sh`
+3. Run `train_full_model.py`
