@@ -32,3 +32,6 @@ pip install simpletransformers
 1. Run `train_irl_models.sh`
 2. Run `make_irl_predictions.sh`
 3. Run `train_full_model.py`
+
+
+_Please contact Thilina C. Rajapakse to receive the trained model for academic purposes._
